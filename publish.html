@@ -138,22 +138,28 @@
 
                 <div class="col-lg-6">
                   <fieldset>
-                    <label style="font-weight:600;">Imagen destacada</label>
-                    <div class="file-input-wrapper">
-                      <button type="button" class="custom-file-btn" data-target="featured_image_input">Seleccionar imagen</button>
-                      <span class="file-name" id="featured_image_name">Ningún archivo seleccionado</span>
-                      <div class="file-preview" id="featured_image_preview" style="display:none;"></div>
+                    <div class="file-control">
+                      <label class="file-title" style="font-weight:600;">Imagen destacada</label>
+                      <div class="file-action">
+                        <button type="button" class="custom-file-btn orange-button" data-target="featured_image_input">Seleccionar imagen</button>
+                      </div>
+                      <div class="file-meta">
+                        <span class="file-name" id="featured_image_name">Ningún archivo seleccionado</span>
+                      </div>
                       <input type="file" id="featured_image_input" name="featured_image" accept="image/*" style="display:none;">
                     </div>
                   </fieldset>
                 </div>
                 <div class="col-lg-6">
                   <fieldset>
-                    <label style="font-weight:600;">Documento / plan de negocio (PDF)</label>
-                    <div class="file-input-wrapper">
-                      <button type="button" class="custom-file-btn" data-target="business_doc_input">Subir PDF</button>
-                      <span class="file-name" id="business_doc_name">Ningún archivo seleccionado</span>
-                      <button type="button" class="file-clear" id="business_doc_clear" style="display:none;">Eliminar</button>
+                    <div class="file-control">
+                      <label class="file-title" style="font-weight:600;">Documento / plan de negocio (PDF)</label>
+                      <div class="file-action">
+                        <button type="button" class="custom-file-btn orange-button" data-target="business_doc_input">Subir PDF</button>
+                      </div>
+                      <div class="file-meta">
+                        <span class="file-name" id="business_doc_name">Ningún archivo seleccionado</span>
+                      </div>
                       <input type="file" id="business_doc_input" name="business_doc" accept="application/pdf" style="display:none;">
                     </div>
                   </fieldset>
@@ -168,8 +174,9 @@
 
                 <div class="col-lg-12">
                   <fieldset>
-                    <div style="display:flex; align-items:center; gap:12px;">
-                      <input type="checkbox" id="agree" name="agree" required>
+                    
+                    <div class="checkbox-row" style="display:flex; align-items:center; gap:12px;">
+                      <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
                       <label for="agree">Certifico que la información es verídica y autorizo la revisión por parte de InVestingD.</label>
                     </div>
                   </fieldset>
@@ -177,7 +184,7 @@
 
                 <div class="col-lg-12">
                   <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Enviar proyecto para revisión</button>
+                    <button type="submit" id="form-submit" class="blue-button">Enviar proyecto para revisión</button>
                   </fieldset>
                 </div>
 

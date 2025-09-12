@@ -888,6 +888,38 @@ Header Style
   text-align: center;
   box-shadow: 0 6px 18px rgba(245,121,73,0.10);
 }
+
+/* Match file buttons to the submit button's visual style for consistency (now using primary color) */
+#free-quote .custom-file-btn {
+  display: inline-block;
+  width: auto; /* shrink-to-fit */
+  padding: 0 28px;
+  margin: 18px 0 0 0;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 26px;
+  background: linear-gradient(90deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 80% , black 10%));
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  font-size: 15.5px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 28px rgba(37,60,245,0.12);
+  text-align: center;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+#free-quote .custom-file-btn:hover { transform: translateY(-1px); }
+
+#free-quote .custom-file-btn:active { transform: translateY(0) scale(0.995); }
+
+#free-quote .custom-file-btn:focus { outline: none; box-shadow: 0 8px 28px rgba(37,60,245,0.18); }
+
+/* Mobile: follow submit button behavior and become full-width for easy tapping */
+@media (max-width: 480px) {
+  #free-quote .custom-file-btn { display: block; width: 100%; padding: 0 18px; box-sizing: border-box; }
+}
 .file-name {
   color: var(--color-neutral);
   font-size: 14px;
@@ -942,8 +974,9 @@ Header Style
   }
   .header-area .main-nav .logo {
     position: absolute;
-    left: 30px;
+    left: 50%;
     top: 0px;
+    transform: translateX(-50%); /* center the absolute logo */
   }
   .background-header .main-nav .logo {
     top: 0px;
@@ -976,6 +1009,28 @@ Header Style
   }
   .header-area .logo {
     margin-left: 0px;
+  }
+  /* Make the header logo larger and centered inside the anchor */
+  .header-area .main-nav .logo img,
+  .header-area .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 180px; /* larger on desktop */
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    .header-area .main-nav .logo img,
+    .header-area .logo img {
+      max-width: 140px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .header-area .main-nav .logo img,
+    .header-area .logo img {
+      max-width: 120px;
+    }
   }
   .header-area .menu-trigger {
     display: block !important;
@@ -1114,15 +1169,60 @@ Banner Style
 
 .main-banner {
   position: relative;
-  padding: 295px 0px 185px 0px;
+  padding: 200px 0 120px 0; /* restored to template default */
 }
 
-.main-banner:after,
-.main-banner::before {
-  /* decorative images removed per request */
-  content: "" !important;
-  display: none !important;
+/* Right-side banner image (inicio.jpg) */
+.banner-image-wrapper {
+  /* allow the wrapper to fully fill its column like in about.html */
+  max-width: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
 }
+.banner-right-image {
+  width: 100%;
+  height: auto;        /* override del height:100% anterior */
+  max-height: 520px;   /* ajusta este valor según tu contenido (p.ej. 480–560px) */
+  object-fit: contain; /* evita recortes y respeta proporciones */
+  margin-top: 0 !important;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  /* use template default positioning */
+}
+
+/* Desktop: make the banner row stretch columns and let the image fill the column height */
+@media (min-width: 992px) {
+  .main-banner .row {
+    align-items: stretch; /* ensure both columns are same height */
+  }
+  /* target the specific right-column used in the markup */
+  /* make left text column align start and right column fill fully */
+  .col-lg-7 { display: flex; align-items: flex-start; }
+  .col-lg-5.d-none.d-lg-flex {
+    display: block !important; /* let column behave normally so wrapper can fill it */
+  }
+  .banner-image-wrapper {
+    height: 100%;
+    display: block;
+    padding-left: 30px; /* small gutter from text */
+  }
+  .banner-right-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 0 !important;
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-image-wrapper { display: none; }
+}
+
 
 .main-banner h6 {
   font-size: 20px;
@@ -2099,36 +2199,291 @@ Most Asked Style
   margin-bottom: 40px;
 }
 
-#free-quote input {
+#free-quote {
+  /* Constrain form width on large screens and center it visually */
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+#free-quote input,
+#free-quote select {
   width: 100%;
-  height: 46px;
-  border-radius: 23px;
-  background-color: #f3f4f6;
-  border: none;
+  height: 52px;
+  border-radius: 26px;
+  background-color: #f7f8fa;
+  border: 1px solid rgba(94,97,117,0.06);
   outline: none;
-  padding: 0px 15px;
-  font-size: 14px;
+  padding: 0px 18px;
+  font-size: 15px;
   color: #2a2a2a;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  transition: box-shadow .12s, border-color .12s;
 }
 
-#free-quote input::placeholder {
-  color: #2a2a2a;
+#free-quote input::placeholder,
+#free-quote textarea::placeholder {
+  color: #8b8f98;
+  font-weight: 500;
 }
 
-#free-quote button {
-  border: none;
-  height: 46px;
-  background-color: #253CF5;
+#free-quote textarea {
   width: 100%;
-  border-radius: 23px;
-  color: #fff;
-  transition: all .4s;
+  min-height: 160px;
+  border-radius: 16px;
+  background-color: #f7f8fa;
+  border: 1px solid rgba(94,97,117,0.06);
+  outline: none;
+  padding: 14px;
+  font-size: 15px;
+  color: #2a2a2a;
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.6;
 }
 
-#free-quote button:hover {
-  opacity: 0.8;
+/* More compact, balanced layout for the two file controls */
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.file-input-wrapper .custom-file-btn {
+  flex: 0 0 220px; /* fixed button width for symmetry */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+}
+
+.file-input-wrapper .file-name {
+  flex: 1 1 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Small preview image tweaks */
+.file-preview img { max-width: 120px; max-height: 80px; }
+
+/* Submit button: full-width pill that follows secondary color */
+#free-quote #form-submit,
+#free-quote .orange-button {
+  display: inline-block;
+  width: auto; /* shrink to fit text + padding */
+  padding: 0 28px; /* horizontal breathing room */
+  margin: 18px 0 0 0;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 26px;
+  background: linear-gradient(90deg, var(--color-secondary), color-mix(in srgb, var(--color-secondary) 80% , black 10%));
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  font-size: 15.5px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 28px rgba(245,121,73,0.12);
+  text-align: center;
+}
+
+/* Blue variant: mirrors orange-button but uses primary (blue) color */
+#free-quote .blue-button {
+  display: inline-block;
+  width: auto;
+  padding: 0 28px;
+  margin: 18px 0 0 0;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 26px;
+  background: linear-gradient(90deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 80% , black 10%));
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  font-size: 15.5px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 28px rgba(37,60,245,0.12);
+  text-align: center;
+}
+
+/* Ensure the submit button (id) also uses the blue variant when given the class
+   (#free-quote #form-submit has higher specificity than .blue-button alone) */
+#free-quote #form-submit.blue-button {
+  background: linear-gradient(90deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 80% , black 10%));
+  box-shadow: 0 8px 28px rgba(37,60,245,0.12);
+  color: #fff;
+  border: none;
+}
+
+@media (max-width: 480px) {
+  #free-quote #form-submit, #free-quote .orange-button, #free-quote .blue-button {
+    display: block;
+    width: 100%;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+}
+
+/* Center the final fieldset that contains the submit button so inline-block can be centered */
+#free-quote fieldset:last-child { text-align: center; }
+
+/* Mobile: make button full-width for easier tapping */
+@media (max-width: 480px) {
+  #free-quote #form-submit, #free-quote .orange-button {
+    display: block;
+    width: 100%;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+}
+
+#free-quote #form-submit:hover { transform: translateY(-1px); }
+
+/* Focus states for accessibility */
+#free-quote input:focus, #free-quote textarea:focus, #free-quote select:focus {
+  box-shadow: 0 6px 20px rgba(37,60,245,0.06);
+  border-color: rgba(37,60,245,0.18);
+}
+
+/* Larger, visually balanced checkbox inside the publish form */
+#free-quote input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px; /* tighten spacing */
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid rgba(94,97,117,0.18);
+  border-radius: 2px; /* very square */
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+}
+
+/* ------------------------------
+   Form spacing group
+   Keep all spacing rules for the publish form in this block so they are
+   easy to adjust independently.
+   ------------------------------ */
+
+
+/* Stack file control: title -> action (button) -> meta (filename/preview) */
+.file-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.file-control .file-title {
+  font-size: 14px;
+  color: var(--color-neutral);
+}
+
+.file-control .file-action {
+  display: flex;
+  gap: 8px; /* space between button and clear */
+  align-items: center;
+}
+
+.file-control .file-action .custom-file-btn {
+  padding: 9px 16px;
+  min-width: auto;
+  box-shadow: none;
+}
+
+.file-control .file-meta {
+  margin-top: 2px;
+}
+
+/* Center file-control contents for publish form: label, button, filename/preview */
+#free-quote .file-control {
+  align-items: center; /* centers child elements horizontally */
+  text-align: center; /* filename text centered */
+}
+
+/* Add extra vertical spacing under file-control on desktop for clearer separation */
+#free-quote .file-control { margin-bottom: 18px; }
+
+#free-quote .file-control .file-title {
+  width: 100%;
+}
+
+#free-quote .file-control .file-action {
+  justify-content: center; /* center the button(s) */
+}
+
+#free-quote .file-control .file-meta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Make filename wrap in the center and not overflow the column */
+#free-quote .file-control .file-name {
+  white-space: normal;
+  overflow: visible;
+  max-width: 100%;
+}
+
+.file-control .file-name {
+  display: block;
+  color: var(--color-neutral);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* On narrow screens stack nicely */
+@media (max-width: 767px) {
+  .file-input-wrapper { flex-wrap: wrap; }
+  .file-control { width: 100%; }
+  .file-control .file-action .custom-file-btn { width: 100%; }
+}
+
+#free-quote input[type="checkbox"]:checked {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+#free-quote input[type="checkbox"]:checked::after {
+  content: "\2713"; /* checkmark */
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+
+/* Force a narrower checkbox specifically for the 'agree' checkbox on the
+   publish form. Use a highly specific selector so this overrides any broader
+   rules (keeps checkmark centered and reduces visual width). */
+#free-quote input[type="checkbox"]#agree {
+  width: 12px !important;
+  height: 12px !important;
+  vertical-align: middle;
+  margin-right: 8px; /* keep label spacing consistent */
+  border-width: 1.6px;
+  border-radius: 2px;
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+}
+
+#free-quote input[type="checkbox"]#agree:checked::after {
+  /* Slightly smaller checkmark to fit the reduced box */
+  font-size: 10px !important;
+  line-height: 1;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 /* Contact section: icons and select styling */
@@ -2242,92 +2597,10 @@ body {
   }
 }
 
-@media (max-width: 992px) {
-  .pre-header .left-info ul li {
-    padding-right: 10px;
-    margin-right: 10px;
-  }
-  .pre-header .left-info ul li a {
-    font-size: 13px;
-  }
-  .main-banner .caption {
-    padding: 30px !important;
-    text-align: center;
-  }
-  .main-banner p {
-    padding-right: 0%;
-  }
-  .main-banner .line-dec {
-    margin: 30px auto 20px auto;
-  }
-  .projects .owl-nav {
-    text-align: center;
-    right: auto;
-    top: -70px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .projects .section-heading {
-    text-align: center;
-  }
-  .projects .section-heading .line-dec {
-    margin: 0px auto 20px auto;
-  }
-  .infos .main-content .left-image img {
-    display: inline-block;
-  }
-  .contact-us .contact-us-content,
-  .contact-us .contact-us-content #contact-form {
-    padding: 30px;
-  }
-  .contact-us #map {
-    margin-bottom: 30px;
-  }
-  .contact-us-content .more-info .info-item {
-    margin-bottom: 45px;
-  }
-  .page-heading img {
-    margin-top: 45px;
-  }
-  .video-info .section-heading {
-    padding: 60px 0px 30px 0px;
-  }
-  .video-info .skills {
-    padding: 0px;
-  }
-  .happy-clients .naccs .menu div {
-    width: 100% !important;
-    margin: 15px 0px;
-  }
-  .happy-clients .naccs .menu {
-    padding: 15px;
-  }
-  .happy-clients ul.nacc li img {
-    padding-left: 0px;
-    margin-top: 45px;
-  }
-  .cta h4,
-  .cta .main-button {
-    text-align: center;
-  }
-  .happy-steps .steps .item {
-    margin-right: 0px;
-    border-right: none;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);;
-  }
-  .happy-steps .steps .last-item {
-    border-bottom: none;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
-  .most-asked #free-quote {
-    margin-left: 0px;
-    margin-top: 45px;
-    padding: 30px;
-  }
+@media (max-width: 991px) {
+  .banner-image-wrapper { display: none; }
 }
+
 
 @media (max-width: 1000px) {
   .happy-clients .naccs .menu div {
@@ -2350,4 +2623,44 @@ body {
     padding: 60px;
     border-radius: 23px;
   }
+}
+
+/* ------------------------------------------------------------------
+   Checkbox reset for the publish form
+   Some broad rules (e.g. "#free-quote input { height:52px; border-radius:26px }")
+   can accidentally style checkboxes like text inputs. The rules below are
+   a narrowly-scoped, high-specificity override to keep checkboxes small and
+   square inside #free-quote regardless of earlier generic input rules.
+   ------------------------------------------------------------------ */
+#free-quote input[type="checkbox"] {
+  width: 12px !important;
+  height: 12px !important;
+  padding: 0 !important;
+  margin-right: 8px !important;
+  border-width: 1.6px !important;
+  border-style: solid !important;
+  border-color: rgba(94,97,117,0.18) !important;
+  border-radius: 2px !important;
+  background-color: #fff !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: relative !important;
+}
+
+#free-quote input[type="checkbox"]:checked {
+  background: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
+}
+
+#free-quote input[type="checkbox"]:checked::after {
+  content: "\2713" !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  line-height: 1 !important;
 }

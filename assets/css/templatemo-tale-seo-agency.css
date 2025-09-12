@@ -1467,6 +1467,26 @@ Infos Style
   padding: 60px 60px 30px 60px;
 }
 
+.infos .advantage-list {
+  list-style: none;
+  padding: 0 60px 30px 60px;
+}
+
+.infos .advantage-list li {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-left: 35px;
+  color: #2a2a2a;
+}
+
+.infos .advantage-list li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #253CF5;
+}
+
 .infos .main-content .skills {
   padding: 0px 60px;
 }

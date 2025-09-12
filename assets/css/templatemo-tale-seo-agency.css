@@ -926,6 +926,18 @@ Header Style
   margin-bottom: 12px;
 }
 
+/* High-specificity override for publish page file buttons to ensure the
+   secondary (orange) color is applied even if other styles are loaded later
+   or have higher specificity. This is intentionally narrow (targets the
+   #publish section) and uses !important only here for reliability. */
+#publish .file-input-wrapper .custom-file-btn,
+#free-quote .file-input-wrapper .custom-file-btn {
+  background: var(--color-secondary) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(245,121,73,0.12) !important;
+  border: none !important;
+}
+
     flex-basis: 100%;
   }
   .header-area .main-nav .logo {

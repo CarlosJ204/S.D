@@ -1583,24 +1583,28 @@ Contact Style
   z-index: -1;
 }
 
-.contact-us .contact-us-content {
+.contact-us .contact-us-content,
+.contact-form {
   border-radius: 23px;
   padding: 60px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
 }
 
-.contact-us .contact-us-content #contact-form {
+.contact-us .contact-us-content #contact-form,
+#faq-form {
   padding: 60px;
   border-radius: 23px 23px 0px 0px;
   border: 1px solid rgba(37,60,245,0.06);
 }
 
-#contact-form .section-heading {
+#contact-form .section-heading,
+#faq-form .section-heading {
   text-align: center;
 }
 
-#contact-form input {
+#contact-form input,
+#faq-form input {
   width: 100%;
   height: 46px;
   border-radius: 23px;
@@ -1614,11 +1618,13 @@ Contact Style
   margin-bottom: 15px;
 }
 
-#contact-form input::placeholder {
+#contact-form input::placeholder,
+#faq-form input::placeholder {
   color: #2a2a2a;
 }
 
-#contact-form textarea {
+#contact-form textarea,
+#faq-form textarea {
   width: 100%;
   height: 120px;
   border-radius: 23px;
@@ -1632,11 +1638,13 @@ Contact Style
   margin-bottom: 15px;
 }
 
-#contact-form textarea::placeholder {
+#contact-form textarea::placeholder,
+#faq-form textarea::placeholder {
   color: #2a2a2a;
 }
 
-#contact-form button {
+#contact-form button,
+#faq-form button {
   border: none;
   height: 46px;
   background-color: #253CF5;
@@ -1646,7 +1654,8 @@ Contact Style
   transition: all .4s;
 }
 
-#contact-form button:hover {
+#contact-form button:hover,
+#faq-form button:hover {
   opacity: 0.8;
 }
 
@@ -2526,6 +2535,7 @@ Most Asked Style
 
 /* Make select match input styling for symmetry */
 #contact-form select,
+#faq-form select,
 #free-quote select {
   width: 100%;
   height: 46px;
@@ -2550,6 +2560,7 @@ Most Asked Style
 
 /* On focus, show primary outline */
 #contact-form select:focus,
+#faq-form select:focus,
 #free-quote select:focus {
   box-shadow: 0 0 0 3px rgba(37,60,245,0.12);
 }
@@ -2557,14 +2568,17 @@ Most Asked Style
 /* Make contact form button use palette */
 .contact-us .contact-us-content #form-submit,
 .contact-us .contact-us-content button#form-submit,
-.contact-us .main-button a {
+.contact-us .main-button a,
+.contact-form #form-submit,
+.contact-form button#form-submit {
   background-color: var(--color-primary);
   color: #fff;
   border-radius: 23px;
   padding: 12px 22px;
 }
 .contact-us .contact-us-content #form-submit:hover,
-.contact-us .main-button a:hover {
+.contact-us .main-button a:hover,
+.contact-form #form-submit:hover {
   background-color: var(--color-primary-dark);
 }
 

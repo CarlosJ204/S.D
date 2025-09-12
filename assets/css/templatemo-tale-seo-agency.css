@@ -2139,6 +2139,12 @@ Most Asked Style
 
 .most-asked .section-heading {
   margin-bottom: 80px;
+  text-align: center;
+}
+
+.most-asked .section-heading .line-dec {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .most-asked .accordions .accordion {

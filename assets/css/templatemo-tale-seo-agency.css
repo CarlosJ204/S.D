@@ -2000,24 +2000,20 @@ Happy Clients Style
   margin-bottom: 25px;
 }
 
-.happy-clients ul.nacc li .info {
+.happy-clients ul.nacc li .info-list {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-left: 0;
 }
 
-.happy-clients ul.nacc li .info span {
-  display: block;
+.happy-clients ul.nacc li .info-list li {
   background-color: #253CF5;
   border-radius: 20px;
   color: #fff;
   padding: 10px 25px;
   font-size: 18px;
-}
-
-.happy-clients ul.nacc li .info span.last-span {
-  margin-right: 0px;
 }
 
 .happy-clients ul.nacc li.active {
@@ -2139,6 +2135,12 @@ Most Asked Style
 
 .most-asked .section-heading {
   margin-bottom: 80px;
+  text-align: center;
+}
+
+.most-asked .section-heading .line-dec {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .most-asked .accordions .accordion {

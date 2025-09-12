@@ -2006,7 +2006,8 @@ Happy Clients Style
   flex-direction: column;
   gap: 15px;
   padding-left: 0;
-}
+  list-style: none;
+
 
 .happy-clients ul.nacc li .info-list li {
   background-color: #253CF5;

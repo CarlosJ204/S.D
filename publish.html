@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <title>Publica tu proyecto - InVestingT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+  </head>
+
+<body>
+
+  <!-- Header (reuse site header) -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="InVestingD" style="max-width: 112px;">
+                    </a>
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="index.html" class="active">Inicio</a></li>
+                      <li class="scroll-to-section"><a href="index.html#services">Proyectos</a></li>
+                      <li class="scroll-to-section"><a href="index.html#projects">Invertir</a></li>
+                      <li class="has-sub">
+                          <a href="javascript:void(0)">Pages</a>
+                          <ul class="sub-menu">
+                              <li><a href="about.html">About Us</a></li>
+                              <li><a href="faqs.html">FAQs</a></li>
+                          </ul>
+                      </li>
+                      <li class="scroll-to-section"><a href="index.html#contact">Contact</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <!-- Page heading / hero -->
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-heading">
+            <h2>Publica tu <em>proyecto</em> en <span>InVestingT</span></h2>
+            <div class="line-dec"></div>
+            <p>Completa el formulario para que nuestro equipo revise tu proyecto y lo publique en la plataforma. Incluye datos financieros, documentación y una imagen representativa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submission form -->
+  <div class="contact-us section" id="publish">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="contact-us-content">
+            <form id="free-quote" action="#" method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="section-heading">
+                    <h2><em>Formulario</em> de publicación</h2>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="text" name="project_title" id="project_title" placeholder="Título del proyecto" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="text" name="sector" id="sector" placeholder="Sector (ej. energía, fintech, educación)" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="number" name="funding_goal" id="funding_goal" placeholder="Meta de financiación (ej. 50000)" min="0" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="number" name="min_invest" id="min_invest" placeholder="Inversión mínima (ej. 50)" min="0" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="text" name="duration" id="duration" placeholder="Plazo estimado (ej. 12 meses)" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="text" name="founder" id="founder" placeholder="Nombre del responsable / fundador" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="email" name="email" id="email" placeholder="Correo de contacto" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <input type="tel" name="phone" id="phone" placeholder="Teléfono de contacto" required>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="summary" id="summary" placeholder="Resumen ejecutivo (máx. 500 caracteres)" maxlength="500" required></textarea>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-6">
+                  <fieldset>
+                    <label style="font-weight:600;">Imagen destacada</label>
+                    <div class="file-input-wrapper">
+                      <button type="button" class="custom-file-btn" data-target="featured_image_input">Seleccionar imagen</button>
+                      <span class="file-name" id="featured_image_name">Ningún archivo seleccionado</span>
+                      <div class="file-preview" id="featured_image_preview" style="display:none;"></div>
+                      <input type="file" id="featured_image_input" name="featured_image" accept="image/*" style="display:none;">
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-lg-6">
+                  <fieldset>
+                    <label style="font-weight:600;">Documento / plan de negocio (PDF)</label>
+                    <div class="file-input-wrapper">
+                      <button type="button" class="custom-file-btn" data-target="business_doc_input">Subir PDF</button>
+                      <span class="file-name" id="business_doc_name">Ningún archivo seleccionado</span>
+                      <button type="button" class="file-clear" id="business_doc_clear" style="display:none;">Eliminar</button>
+                      <input type="file" id="business_doc_input" name="business_doc" accept="application/pdf" style="display:none;">
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label style="font-weight:600;">Información financiera y métricas clave</label>
+                    <textarea name="financials" id="financials" placeholder="Ingresos proyectados, costes, margen, uso de fondos, etc." required></textarea>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-12">
+                  <fieldset>
+                    <div style="display:flex; align-items:center; gap:12px;">
+                      <input type="checkbox" id="agree" name="agree" required>
+                      <label for="agree">Certifico que la información es verídica y autorizo la revisión por parte de InVestingD.</label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Enviar proyecto para revisión</button>
+                  </fieldset>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>© 2025 InVestingD. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script>
+    (function(){
+      // Helper to wire custom file buttons
+      function setupFileInput(buttonSelector, inputId, nameDisplayId, previewContainerId) {
+        var btn = document.querySelector(buttonSelector);
+        var input = document.getElementById(inputId);
+        var nameDisplay = nameDisplayId ? document.getElementById(nameDisplayId) : null;
+        var preview = previewContainerId ? document.getElementById(previewContainerId) : null;
+
+        if (!btn || !input) return;
+        btn.addEventListener('click', function(){ input.click(); });
+        input.addEventListener('change', function(e){
+          var file = input.files && input.files[0];
+          if (!file) {
+            if (nameDisplay) nameDisplay.textContent = 'Ningún archivo seleccionado';
+            if (preview) preview.style.display = 'none';
+            return;
+          }
+          if (nameDisplay) nameDisplay.textContent = file.name;
+          if (preview && file.type.startsWith('image/')) {
+            var img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            // clear previous
+            preview.innerHTML = '';
+            preview.appendChild(img);
+            preview.style.display = '';
+            img.onload = function(){ URL.revokeObjectURL(this.src); };
+          }
+        });
+      }
+
+      // featured image
+      setupFileInput('.custom-file-btn[data-target="featured_image_input"]', 'featured_image_input', 'featured_image_name', 'featured_image_preview');
+      // business doc
+      setupFileInput('.custom-file-btn[data-target="business_doc_input"]', 'business_doc_input', 'business_doc_name');
+
+      // clear button for PDF
+      var clearPdf = document.getElementById('business_doc_clear');
+      var pdfInput = document.getElementById('business_doc_input');
+      var pdfName = document.getElementById('business_doc_name');
+      if (clearPdf && pdfInput) {
+        pdfInput.addEventListener('change', function(){ clearPdf.style.display = pdfInput.files && pdfInput.files.length ? '' : 'none'; });
+        clearPdf.addEventListener('click', function(){ pdfInput.value = ''; pdfName.textContent = 'Ningún archivo seleccionado'; clearPdf.style.display = 'none'; });
+      }
+
+      // Character counters
+      function attachCounter(textareaId, max) {
+        var ta = document.getElementById(textareaId);
+        if (!ta) return;
+        var counter = document.createElement('div');
+        counter.className = 'char-counter';
+        ta.parentNode.insertBefore(counter, ta.nextSibling);
+        function update(){
+          var len = ta.value.length;
+          counter.textContent = len + ' / ' + max + ' caracteres';
+        }
+        ta.addEventListener('input', update);
+        update();
+      }
+      attachCounter('summary', 500);
+      attachCounter('financials', 2000);
+
+    })();
+  </script>
+
+  </body>
+
+</html>

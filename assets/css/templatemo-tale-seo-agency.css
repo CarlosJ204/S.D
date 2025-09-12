@@ -1467,6 +1467,26 @@ Infos Style
   padding: 60px 60px 30px 60px;
 }
 
+.infos .advantage-list {
+  list-style: none;
+  padding: 0 60px 30px 60px;
+}
+
+.infos .advantage-list li {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-left: 35px;
+  color: #2a2a2a;
+}
+
+.infos .advantage-list li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #253CF5;
+}
+
 .infos .main-content .skills {
   padding: 0px 60px;
 }
@@ -1921,7 +1941,7 @@ Happy Clients Style
   width: 24.6%;
   display: inline-block;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: #2a2a2a;
   cursor: pointer;
@@ -1959,7 +1979,7 @@ Happy Clients Style
 }
 
 .happy-clients ul.nacc li h4 {
-  font-size: 30px;
+  font-size: 34px;
   color: #2a2a2a;
   margin-bottom: 25px;
 }
@@ -1973,18 +1993,18 @@ Happy Clients Style
 
 .happy-clients ul.nacc li .info {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .happy-clients ul.nacc li .info span {
-  display: inline-block;
+  display: block;
   background-color: #253CF5;
   border-radius: 20px;
-  height: 40px;
-  line-height: 40px;
   color: #fff;
-  padding: 0px 20px;
-  margin-right: 20px;
-  margin-bottom: 30px;
+  padding: 10px 25px;
+  font-size: 18px;
 }
 
 .happy-clients ul.nacc li .info span.last-span {

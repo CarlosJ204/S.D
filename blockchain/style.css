@@ -1,0 +1,45 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(90deg, #004e92 0%, #000428 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.main {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #004e92 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #004e92;
+}
+
+.btn-primary {
+  background-color: #004e92;
+  border-color: #004e92;
+}
+
+.btn-primary:hover {
+  background-color: #003f7f;
+  border-color: #003f7f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #004e92;
+}
+
+.text-white {
+  color: #fff !important;
+}

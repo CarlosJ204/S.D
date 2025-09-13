@@ -2529,6 +2529,19 @@ Most Asked Style
   transform: translate(-50%, -50%) !important;
 }
 
+/* Flex layout for the publish form consent checkbox */
+#free-quote .checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Inline label inside the checkbox row */
+#free-quote .checkbox-row label {
+  display: inline;
+  margin-bottom: 0;
+}
+
 /* Contact section: icons and select styling */
 .contact-us .more-info .info-item i,
 .contact-us .info-item i {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verificar envío - PasarEx Colombia</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Verificar envío</h1>
+    <form>
+      <div class="mb-3">
+        <label for="valor-pagado" class="form-label">Valor pagado</label>
+        <input type="number" class="form-control" id="valor-pagado" required />
+      </div>
+      <div class="mb-3">
+        <label for="estado-paquete" class="form-label">Estado del paquete</label>
+        <input type="text" class="form-control" id="estado-paquete" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Verificar</button>
+    </form>
+  </div>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

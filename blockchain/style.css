@@ -1,9 +1,12 @@
 body {
   font-family: 'Open Sans', sans-serif;
+
   background-color: #f5f6fa;
+
   min-height: 100vh;
   color: #333;
 }
+
 
 /* Sección principal con imagen de fondo al estilo PasarEx */
 .hero {
@@ -26,6 +29,7 @@ body {
   font-size: 1.1rem;
 }
 
+
 .main {
   padding-top: 80px;
   padding-bottom: 40px;
@@ -37,6 +41,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 .form-container label {
   color: #004e92;

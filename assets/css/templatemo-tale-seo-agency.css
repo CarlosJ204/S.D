@@ -1347,6 +1347,55 @@ Services Style
   color: #253CF5;
 }
 
+/* Steps */
+.steps {
+  background-color: var(--muted-bg);
+}
+
+.steps .step-item {
+  border: 1px solid rgba(37,60,245,0.06);
+  border-radius: 23px;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: all .4s;
+}
+
+.steps .step-number {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.steps .step-item h4 {
+  font-size: 20px;
+  color: #2a2a2a;
+  margin-top: 20px;
+  line-height: 30px;
+  transition: all .4s;
+}
+
+.steps .step-item p {
+  margin-top: 15px;
+}
+
+.steps .step-item:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.steps .step-item:hover h4 {
+  color: #253CF5;
+}
+
 /* 
 ---------------------------------------------
 Projects Style

@@ -1993,29 +1993,18 @@ Happy Clients Style
   margin-bottom: 25px;
 }
 
+.happy-clients .phase-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .happy-clients ul.nacc li .line-dec {
   background-color: #253CF5;
   width: 60px;
   height: 2px;
   margin-bottom: 25px;
-}
-
-.happy-clients ul.nacc li .info-list {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding-left: 0;
-  list-style: none;
-
-}
-
-.happy-clients ul.nacc li .info-list li {
-  background-color: #253CF5;
-  border-radius: 20px;
-  color: #fff;
-  padding: 10px 25px;
-  font-size: 18px;
 }
 
 .happy-clients ul.nacc li.active {

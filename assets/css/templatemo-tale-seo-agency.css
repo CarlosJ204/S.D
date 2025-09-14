@@ -1299,6 +1299,7 @@ Services Style
   padding-right: 30px;
 }
 
+
 .services-left-image {
   width: 100%;
   height: auto;
@@ -1306,6 +1307,7 @@ Services Style
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
 }
 
 .services::after {

@@ -1299,15 +1299,15 @@ Services Style
   padding-right: 30px;
 }
 
-.services::before {
-  /* Use a real photo instead of the illustrative rocket */
-  content: url(../images/inicio.jpg);
-  top: 120px;
-  left: 0;
-  position: absolute;
-  width: 844px;
-  height: 714px;
-  z-index: -1;
+
+.services-left-image {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
 }
 
 .services::after {
@@ -2709,14 +2709,6 @@ body {
     border-right: none;
   }
 }
-
-@media (max-width: 1200px) {
-  .services::before {
-    top: 60%;
-    transform: translateY(-50%);
-  }
-}
-
 @media (max-width: 1400px) {
   .main-banner .caption {
     background-color: rgba(250, 250, 250, 0.95);

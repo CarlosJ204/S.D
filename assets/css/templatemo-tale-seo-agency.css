@@ -1300,7 +1300,8 @@ Services Style
 }
 
 .services::before {
-  content: url(../images/services-left.jpg);
+  /* Use a real photo instead of the illustrative rocket */
+  content: url(../images/inicio.jpg);
   top: 120px;
   left: 0;
   position: absolute;

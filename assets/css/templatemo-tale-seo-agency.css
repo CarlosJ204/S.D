@@ -1299,7 +1299,6 @@ Services Style
   padding-right: 30px;
 }
 
-
 .services-left-image {
   width: 100%;
   height: auto;
@@ -1307,20 +1306,8 @@ Services Style
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-
 }
 
-.services::after {
-  content: url(../images/contact-left.jpg);
-  bottom: -150px;
-  right: 0;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  position: absolute;
-  width: 103px;
-  height: 464px;
-  z-index: -1;
-}
 
 .services .service-item {
   border: 1px solid rgba(37,60,245,0.06);

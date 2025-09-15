@@ -2696,6 +2696,13 @@ body {
     transform: translate(-23px, -23px);
   }
 }
+.projects .item{ border-radius:16px; overflow:hidden; background:#fff; }
+.projects .item > img{
+  width: 100%;
+  aspect-ratio: 16/9;  /* o 4/3, 3/2, etc. */
+  object-fit: cover;
+  display: block;
+}
 
 @media (max-width: 991px) {
   .banner-image-wrapper { display: none; }

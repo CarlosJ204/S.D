@@ -1295,17 +1295,30 @@ Services Style
   overflow: hidden;
 }
 
+.services .row.gx-5 {
+  --bs-gutter-x: 20rem; /* aumenta el espacio horizontal (por defecto es 1.5rem) */
+}
+
+/* También puedes dar padding a la columna derecha */
+.services .col-lg-7 {
+  padding-left: 80px; /* ajusta el valor según lo necesites */
+}
+
+/* Eliminar la mancha decorativa */
+.services::after,
+.services::before {
+  display: none !important;
+}
+
 .services .section-heading h2 {
   padding-right: 30px;
 }
 
 .services-left-image {
-  width: 100%;
-  height: auto;
-  max-height: 520px;
-  object-fit: contain;
+  width: 500px;
+  height: 580px;
+  object-fit: cover; /* recorta la imagen si no encaja */
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 
@@ -1488,7 +1501,7 @@ Infos Style
 }
 
 .infos .main-content .left-image {
-  background-image: url(../images/left-infos.jpg);
+  background-image: url(../images/Diseño\ sin\ título\ \(1\).png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
